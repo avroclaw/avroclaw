@@ -3,8 +3,9 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { AlertTriangle, Eye, KeyRound, Lock, Shield, Terminal } from "lucide-react";
+import React from "react";
 
-const painPoints = [
+const painPoints: { icon: React.ReactNode; title: string; desc: string; severity: "critical" | "high" | "medium" }[] = [
   {
     icon: <KeyRound size={18} />,
     title: "Exposed credentials",
