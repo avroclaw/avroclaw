@@ -67,18 +67,17 @@ const tiers = [
   },
 ];
 
-function TierCard({ tier, index, inView }: { tier: typeof tiers[0]; index: number; inView: boolean }) {
+function TierCard({ tier, index, inView, hoveredIndex, setHoveredIndex }: { tier: typeof tiers[0]; index: number; inView: boolean; hoveredIndex: number | null; setHoveredIndex: (i: number | null) => void }) {
   const [expanded, setExpanded] = useState(false);
-  const [hovered, setHovered] = useState(false);
-  const isGreen = tier.popular || hovered;
+  const isGreen = hoveredIndex === index || (hoveredIndex === null && tier.popular);
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      onMouseEnter={() => setHoveredIndex(index)}
+      onMouseLeave={() => setHoveredIndex(null)}
       className={`relative rounded-xl border transition-all duration-300 cursor-default ${
         isGreen
           ? "border-[rgba(74,222,128,0.25)] bg-[rgba(74,222,128,0.04)] shadow-lg shadow-emerald-500/5"
@@ -179,6 +178,7 @@ function TierCard({ tier, index, inView }: { tier: typeof tiers[0]; index: numbe
 export function Services() {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <section id="pricing" className="relative py-28 overflow-hidden border-t border-white/[0.04]">
@@ -211,7 +211,7 @@ export function Services() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           {tiers.map((tier, i) => (
-            <TierCard key={tier.name} tier={tier} index={i} inView={inView} />
+            <TierCard key={tier.name} tier={tier} index={i} inView={inView} hoveredIndex={hoveredIndex} setHoveredIndex={setHoveredIndex} />
           ))}
         </div>
       </div>
