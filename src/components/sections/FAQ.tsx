@@ -83,7 +83,7 @@ export function FAQ() {
                 Still have questions? Book a no-pressure 20-minute call and we&apos;ll answer everything live.
               </p>
               <a
-                href="https://cal.com/sanim"
+                href="https://cal.com/sanim/avroclaw"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 mt-3 text-sm font-medium text-[#4ADE80] hover:text-[#86EFAC] transition-colors"

@@ -77,7 +77,7 @@ export function Hero() {
           className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3"
         >
           <a
-            href="https://cal.com/sanim"
+            href="https://cal.com/sanim/avroclaw"
             target="_blank"
             rel="noopener noreferrer"
           >

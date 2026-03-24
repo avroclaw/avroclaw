@@ -160,7 +160,7 @@ export function Pricing() {
               </ul>
 
               <a
-                href="https://cal.com/sanim"
+                href="https://cal.com/sanim/avroclaw"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`flex items-center justify-center gap-2 w-full py-3 rounded-lg text-sm font-semibold transition-all duration-200 group ${

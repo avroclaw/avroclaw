@@ -73,7 +73,7 @@ export function Navbar() {
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="https://cal.com/sanim"
+              href="https://cal.com/sanim/avroclaw"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -117,7 +117,7 @@ export function Navbar() {
               ))}
               <div className="pt-2 border-t border-white/[0.06] mt-2">
                 <a
-                  href="https://cal.com/sanim"
+                  href="https://cal.com/sanim/avroclaw"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block"

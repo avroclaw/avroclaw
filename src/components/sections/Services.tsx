@@ -160,7 +160,7 @@ function TierCard({ tier, index, inView }: { tier: typeof tiers[0]; index: numbe
         </AnimatePresence>
 
         <a
-          href="https://cal.com/sanim"
+          href="https://cal.com/sanim/avroclaw"
           target="_blank"
           rel="noopener noreferrer"
           className={`block w-full text-center py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
